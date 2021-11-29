@@ -42,6 +42,7 @@ public class AccountController {
         map.put("name",account.getName());
         map.put("money",account.getMoney());
         int addAccount = accountService.addAccount(map);
+//        return "redirect:/list";
         return "redirect:/list";
     }
     @RequestMapping("/update/{id}")
