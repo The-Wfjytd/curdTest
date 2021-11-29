@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wfjytd.dao.AccountMapper">
+
+    <select id="getAllAccount" resultType="Account">
+        select * from spring_db.account;
+    </select>
+    <select id="getAccountById" resultType="Account">
+        select * from spring_db.account where id =#{id};
+    </select>
+    <insert id="addAccount" parameterType="map">
+        insert into spring_db.account (name, money)
+        value (#{name},#{money});
+    </insert>
+    <update id="updateAccount" parameterType="map">
+        update spring_db.account
+        set name = #{name},money=#{money}
+        where id = #{id};
+    </update>
+    <delete id="deleteAccount">
+        delete from spring_db.account where id = #{id};
+    </delete>
+</mapper>
