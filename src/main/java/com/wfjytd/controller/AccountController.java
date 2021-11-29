@@ -44,6 +44,7 @@ public class AccountController {
         int addAccount = accountService.addAccount(map);
 //        return "redirect:/list";
         return "redirect:/list";
+//        return "redirect:/list";
     }
     @RequestMapping("/update/{id}")
     public String toUpdate(Model model,@PathVariable("id") int id){
