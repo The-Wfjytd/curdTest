@@ -82,6 +82,10 @@ public class AccountController {
         for (int i = 0; i < date.length; i++) {
             accountService.deleteAccount(Integer.parseInt(date[i]));
         }
+        System.out.println(3333);
+        System.out.println(3333);
+        System.out.println(3333);
+        System.out.println(3333);
         return "redirect:/list";
     }
 
