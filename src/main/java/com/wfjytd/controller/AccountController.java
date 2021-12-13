@@ -55,6 +55,9 @@ public class AccountController {
     public String toUpdate(Model model,@PathVariable("id") int id){
         Account accountById = accountService.getAccountById(id);
         model.addAttribute("account",accountById);
+//        return "update";
+//        return "update";
+//        return "update";
         return "update";
     }
     @RequestMapping("/updateAccount")
